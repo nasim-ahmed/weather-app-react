@@ -5,11 +5,15 @@ import Form from '../Form'
 import Card from '../Card'
 
 const Page = () => {
+    const onSubmit = value => {
+         alert(value)
+    }
+
     return (
         <Fragment>
             <div className={`${styles.container} my-5`}>
             <h1 className={`text-center ${styles.title}`}>Weather in</h1>
-            <Form/>
+            <Form submitSearch={onSubmit}/>
             <Card/>
            </div>
         </Fragment>
