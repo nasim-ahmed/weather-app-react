@@ -1,16 +1,18 @@
-import React, { Component, Fragment } from 'react';
+
+import React, { Fragment } from 'react';
 import styles from './Page.module.css'
 import Form from '../Form'
+import Card from '../Card'
 
 const Page = () => {
     return (
-        <body>
-            <div class={`container my-5`}>
+        <Fragment>
+            <div className={`${styles.container} my-5`}>
             <h1 className={`text-center ${styles.title}`}>Weather in</h1>
             <Form/>
+            <Card/>
            </div>
-        </body>
-       
+        </Fragment>
      );
 }
 
