@@ -10,7 +10,6 @@ const Form = () => {
             autocomplete="off"
             className={`form-control ${styles.input} my-3`}
             />
-            
 
             {/* <button
                 type="button"
