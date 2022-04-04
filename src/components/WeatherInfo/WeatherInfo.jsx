@@ -1,12 +1,13 @@
 import styles from './WeatherInfo.module.css';
 import cloud from '../Card/img/cloud.svg'; 
+import PropTypes from 'prop-types';
 
-const WeatherInfo = () => {
+const WeatherInfo = ({location, temperature}) => {
     return (
     <div className="card-body">
         <div className={`${styles.cardmid} row`}>
             <div className={`col-8 text-center ${styles.temp}`}>
-                <span>30&deg;C</span>
+                <span>{temperature}&deg;C</span>
             </div>
             <div className="col-4 condition-temp">
                 <p className={`${styles.condition}`}>Thunder Storm</p>
@@ -32,5 +33,10 @@ const WeatherInfo = () => {
     </div>
     );
 }
+
+WeatherInfo.propTypes = {
+    location: PropTypes.string.isRequired,
+    temperature: PropTypes.string.isRequired,
+ };
 
 export default WeatherInfo;

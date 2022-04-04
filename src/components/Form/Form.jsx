@@ -22,7 +22,6 @@ const Form = ({submitSearch}) => {
             name="city"
             required
             placeholder="Please type city" 
-            autocomplete="off"
             value = {location}
             className={`form-control ${styles.input} my-3`}
             onChange= {handleChange}
