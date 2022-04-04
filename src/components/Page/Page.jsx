@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
-import styles from './Page.module.css'
-import Form from '../Form'
-import Card from '../Card'
+import styles from './Page.module.css';
+import Form from '../Form';
+import Card from '../Card';
 
 import useForecast from '../../hooks/useForecast';
 

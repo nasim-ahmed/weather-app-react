@@ -9,11 +9,10 @@ const useForecast = () => {
     const [error, setError] = useState(false);
     const [forecast, setForecast] = useState(null);
 
-
     const gatherForecastData = data => {
         const currentDay = getCurrentDayForecast(data);
         setForecast({ currentDay });
-        console.log(currentDay);
+        console.log(data);
     };
 
 
