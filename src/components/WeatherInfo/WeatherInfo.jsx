@@ -2,7 +2,7 @@ import styles from './WeatherInfo.module.css';
 import cloud from '../Card/img/cloud.svg'; 
 import PropTypes from 'prop-types';
 
-const WeatherInfo = ({location, temperature, humidity, feelsLike, condition, maxTemp, minTemp}) => {
+const WeatherInfo = ({location, temperature, humidity, feelsLike, condition, maxTemp, minTemp, isDayTime}) => {
     return (
     <div className="card-body">
         <div className={`${styles.cardmid} row`}>
@@ -40,6 +40,7 @@ WeatherInfo.propTypes = {
     condition: PropTypes.string.isRequired,
     maxTemp: PropTypes.string.isRequired,
     minTemp: PropTypes.string.isRequired,
+    isDayTime: PropTypes.bool.isRequired,
  };
 
 export default WeatherInfo;
