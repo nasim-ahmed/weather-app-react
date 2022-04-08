@@ -1,14 +1,14 @@
 import styles from './Location.module.css';
 import PropTypes from 'prop-types';
 
-const Location = ({location, temperature, humidity, feelsLike, condition, maxTemp, minTemp}) => {
+const Location = ({location, temperature, humidity, feelsLike, condition, maxTemp, minTemp, isDayTime}) => {
     return (
-    <div className={`card-img-top ${styles.img}`}>
-       <div className={`${styles.cityname} my-3`}>
-         <p>{location}</p>
-         <span>...</span>
-       </div>
-    </div>
+          <div className={`card-img-top ${isDayTime === true ? styles.img1: styles.img2}`}>
+            <div className={`${styles.cityname} my-3`}>
+               <p>{location}</p>
+               <span>...</span>
+            </div>
+         </div>
     ); 
 }
 
@@ -20,6 +20,7 @@ Location.propTypes = {
    condition: PropTypes.string.isRequired,
    maxTemp: PropTypes.string.isRequired,
    minTemp: PropTypes.string.isRequired,
+   isDayTime: PropTypes.bool.isRequired,
 };
 
 

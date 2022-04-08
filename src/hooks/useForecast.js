@@ -12,7 +12,6 @@ const useForecast = () => {
     const gatherForecastData = data => {
         const currentDay = getCurrentDayForecast(data);
         setForecast({ currentDay });
-        console.log(data);
     };
 
 
